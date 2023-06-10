@@ -105,7 +105,18 @@ export const websiteTodoSlice = createSlice({
             })
         }),
 
+//    reducers for DND
+      chnageInRootAndRoot:((state,action)=>{
+        console.log(action.payload.start,typeof action.payload.end,action.payload.end);
+        const [removeFromRoot]=state.splice(action.payload.start,1);
+       
+        console.log(removeFromRoot);
+        state.splice(action.payload.end,0,removeFromRoot)
 
+
+
+
+      }),
 
 
 
